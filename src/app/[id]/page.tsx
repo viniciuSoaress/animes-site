@@ -19,10 +19,10 @@ export default async function Anime({ params }: { params: { id: string } }) {
   const anime = await getProjects(params)
 
   return (
-    <main className=" flex flex-col gap-1 min-h-screen md:flex-row bg-neutral-700">
+    <main className=" flex flex-col gap-1 min-h-screen md:flex-row  bg-neutral-700">
 
       <div
-        className="flex gap-5 bg-black p-5"
+        className="flex md:flex-col flex-1  gap-5 bg-black p-5"
       >
 
         <img
@@ -52,8 +52,8 @@ export default async function Anime({ params }: { params: { id: string } }) {
 
       </div>
 
-      <div className="bg-black p-5 h-[410px]">
-        <p className="text-gray-300 text-lg">
+      <div className="bg-black p-5 h-[410px] md:h-screen">
+        <p className="text-gray-300 text-lg md:max-w-lg">
           {anime.descricao}
         </p>
       </div>

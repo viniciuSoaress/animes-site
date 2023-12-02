@@ -27,9 +27,9 @@ export default function RootLayout({
       <Header />
       <CharList chars={chars}/>
         {children}
-        <footer>
+        {/* <footer>
         Animes Online. A melhor maneira de assistir animes online grátis, basta dar play e ver seus animes favoritos em hd, atualizados diariamente.
-        </footer>
+        </footer> */}
       </body>
     </html>
   )
