@@ -9,8 +9,7 @@ export function Root({
 }: Props){
 
   return(
-    <div className={`w-[90vw] md:w-[460px] p-3 ${maior ? 'md:flex-1': ''}`}
-    // className="w-[90vw] md:w-[460px] p-3"
+    <div className={`w-[90vw] md:w-[460px] px-8 ${maior ? 'md:flex-1': ''} ${maior ? 'md:border-r': ''} border-neutral-700`}
     >
       {children}
     </div>
