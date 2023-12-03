@@ -3,6 +3,7 @@ import { Popular } from "./ui/Popular"
 import { animesList } from "./utils/animesList"
 import { Root } from "./ui/Root"
 import { Carrossel } from "./ui/Carrossel"
+import { Animes } from "./ui/Animes"
 
 export function getProjects() {
   return animesList
@@ -11,28 +12,33 @@ export function getProjects() {
 export default async function Home() {
 
   const animes = getProjects()
+
+  const popularsAnimes = animes.slice(3, 7)
+
   return (
     <main
-      className="flex min-h-screen flex-col md:flex-row  p-2"
+      className="flex min-h-screen flex-col md:flex-row p-2"
     >
       <Root maior>
-
-        <h1 className="text-2xl">Destaques</h1>
+        <h2 className="text-2xl border-l-4 pl-2 border-red-500">Destaques</h2>
         <Carrossel />
+
+        <h2 className="text-2xl border-l-4 pl-2 border-red-500 mt-2">Todos</h2>
+        <Animes />
       </Root>
 
       <Root>
         <div className="mt-6 flex flex-col gap-3">
-        <h1 className="text-2xl">Populares</h1>
+        <h2 className="text-2xl border-l-4 pl-2 border-red-500">Populares</h2>
 
-          {animes.map(anime => (
+          {popularsAnimes.map(anime => (
 
             <Popular anime={anime} key={anime.id} />
           ))}
         </div>
 
         <div className="mt-6 flex flex-col gap-3">
-        <h1 className="text-2xl">Anos</h1>
+        <h2 className="text-2xl border-l-4 pl-2 border-red-500">Anos</h2>
 
           <AnosList />
         </div>

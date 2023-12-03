@@ -37,5 +37,14 @@ export const animesList = [
     nota: 8.9,
     categorias: ['aventura', 'comedia', 'shounen', 'magia']
 
+  },
+  {
+    id: 4,
+    nome: 'Boku no hero',
+    descricao: 'Por toda a sua vida, Izuku sonhou ser um herói — um objetivo ambicioso para qualquer um, mas especialmente desafiador para um garoto sem superpoderes. Isso mesmo: em um mundo onde 80% da população tem algum tipo de Dom especial, Izuku teve a má sorte de nascer completamente normal. Mas isso não vai impedi-lo de se matricular em uma das academias de herois mais prestigiosas do mundo.',
+    avatar_url: 'https://animesonlinecc.to/wp-content/uploads/2019/07/q4NQMhtjtYc2z2mzIb77SBd83sP-185x278.jpg',
+    ano:2016,
+    nota: 8.2,
+    categorias: ['ação', 'aventura', 'comedia', 'legendado', 'super poderes']
   }
 ]

@@ -11,12 +11,14 @@ export function Carrossel() {
 
   const [index, setIndex] = useState(0)
 
+  const animes = animesList.slice(0, 3)
+
 
   useEffect(() => {
 
 
     const interval = setInterval(() => {
-      setIndex((i) => (i + 1) % animesList.length)
+      setIndex((i) => (i + 1) % animes.length)
     }, 4000)
 
     return () => {
@@ -24,17 +26,17 @@ export function Carrossel() {
     }
   }, [])
 
-  const anime = animesList[index]
+  const anime = animes[index]
 
   return (
     <Link href={`${anime.id}`}>
-      <div className="flex gap-6 mt-4 md:flex-col lg:flex-row  h-96 md:h-auto">
+      <div className="flex gap-6 mt-4 md:flex-col lg:flex-row border-b border-neutral-800 h-96 md:h-auto">
 
-        <img 
-        src={anime.avatar_url}
-         alt={anime.nome} 
-         className="w-60 h-60 rounded-lg"
-         />
+        <img
+          src={anime.avatar_url}
+          alt={anime.nome}
+          className="w-60 h-60 rounded-lg"
+        />
 
         <div className="flex gap-3  flex-col">
           <section>
