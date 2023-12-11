@@ -5,13 +5,13 @@ import { Root } from "./ui/Root"
 import { Carrossel } from "./ui/Carrossel"
 import { Animes } from "./ui/Animes"
 
-export function getProjects() {
+ async function getPost() {
   return animesList
 }
 
 export default async function Home() {
 
-  const animes = getProjects()
+  const animes = await getPost()
 
   const popularsAnimes = animes.slice(3, 7)
 
